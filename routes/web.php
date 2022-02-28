@@ -74,6 +74,10 @@ Route::get('/page-create',function(){
     return view('admin.page-create');
 })->name('page-create');
 
+Route::get('/deneme',function(){
+    return view('admin.page-create');
+})->name('deneme');
+
 Route::group(['prefix' => 'laravel-filemanager'], function () {
     Lfm::routes();
 });
