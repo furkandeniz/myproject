@@ -1,0 +1,11 @@
+name: myblog
+recipe: laravel
+config:
+  webroot: public
+services:
+  myservice:
+    type: phpmyadmin
+    hosts:
+      - database
+  appserver:
+    type: php:7.4
