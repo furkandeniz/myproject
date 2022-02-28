@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\AdminRegisterController;
 use App\Http\Controllers\UsersController;
+use UniSharp\LaravelFilemanager\Lfm;
 
 Route::get('/', function () {
     return view('home');
@@ -69,6 +70,15 @@ Route::get('role-update/{id}',[RolesController::class, 'save'])->name('role-upda
 
 Route::post('/role-update-post', [RolesController::class, 'roleUpdatePost'])->name('role-update-post');
 
+Route::get('/page-create',function(){
+    return view('admin.page-create');
+})->name('page-create');
+
+Route::group(['prefix' => 'laravel-filemanager'], function () {
+    Lfm::routes();
+});
+
 Route::any('{query}',
     function() { return view('admin.404'); })
     ->where('query', '.*');
+

@@ -53,7 +53,7 @@
                     </a>
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="layout-static.html">Ekle</a>
+                            <a class="nav-link" href="{{route('page-create')}}">Ekle</a>
                             <a class="nav-link" href="layout-sidenav-light.html">Düzenle</a>
                         </nav>
                     </div>
@@ -94,5 +94,7 @@
 <script src="{{asset('assets/demo/chart-bar-demo.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
 <script src="{{asset('js/datatables-simple-demo.js')}}"></script>
+@stack('scripts')
 </body>
+
 </html>
